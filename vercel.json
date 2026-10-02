@@ -1,0 +1,7 @@
+{
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "git": {
+    "deploymentEnabled": false
+  }
+}
