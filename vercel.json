@@ -1,0 +1,9 @@
+{
+  "ignoreCommand": "bash ignore-build.sh",
+  "git": {
+    "deploymentEnabled": {
+      "main": true,
+      "gh-pages": false
+    }
+  }
+}
