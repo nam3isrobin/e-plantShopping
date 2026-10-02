@@ -1,33 +1,64 @@
+/* AboutUs.css - Frosted Glass Botanical Mission Card */
+
 .about-us-container {
-    width: 1000px;
-    /* margin: 0 auto; */
-    /* padding: 20px; */
-    /* background-color: red; */
-    text-align: justify;
-  }
-  
-  .about-us-heading {
-    font-size: 32px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .about-us-description {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 30px;
-    text-align: center;
-  }
-  
-  .about-us-content {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-  .plant_logo_right{
-    text-align: right;
+  width: 100%;
+  max-width: 660px;
+  background: rgba(15, 23, 42, 0.72);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 24px;
+  padding: 36px 40px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-us-container:hover {
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+.about-us-heading {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+.about-us-description {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #34d399;
+  margin-bottom: 20px;
+  line-height: 1.45;
+  text-wrap: balance;
+}
+
+.about-us-content {
+  font-size: 0.975rem;
+  line-height: 1.75;
+  color: #cbd5e1;
+  margin-bottom: 16px;
+  text-align: left;
+  text-wrap: pretty;
+}
+
+.about-us-content:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 640px) {
+  .about-us-container {
+    padding: 24px 20px;
+    border-radius: 18px;
   }
 
-  .plant_logo_left{
-    text-align: left;
+  .about-us-description {
+    font-size: 1.1rem;
   }
+
+  .about-us-content {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+}

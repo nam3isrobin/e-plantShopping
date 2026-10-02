@@ -91,19 +91,19 @@ const CartItem = ({ onContinueShopping }) => {
 
   return (
     <div className="cart-container">
-      {/* Total Cart Amount and Total Quantity Headers */}
-      <h2 style={{ color: 'black' }}>Total Cart Amount: ${calculateTotalAmount()}</h2>
-      <h3 style={{ color: '#2e7d32', marginTop: '-10px' }}>
-        Total Plants in Cart: {calculateTotalQuantity()}
-      </h3>
+      {/* Total Cart Amount and Total Quantity Summary Card */}
+      <div className="cart-summary-card">
+        <h2>Total Cart Amount: ${calculateTotalAmount()}</h2>
+        <h3>Total Plants in Cart: {calculateTotalQuantity()}</h3>
+      </div>
 
       {/* Render Cart Items */}
       {cart.length === 0 ? (
-        <div style={{ textAlign: 'center', margin: '30px 0' }}>
-          <p style={{ fontSize: '20px', color: '#666' }}>Your cart is empty.</p>
+        <div className="empty-cart-state">
+          <p>Your shopping cart is currently empty.</p>
         </div>
       ) : (
-        <div>
+        <div className="cart-items-list">
           {cart.map((item) => (
             <div className="cart-item" key={item.name}>
               {/* Plant Thumbnail */}
@@ -160,7 +160,6 @@ const CartItem = ({ onContinueShopping }) => {
         >
           Continue Shopping
         </button>
-        <br />
         <button
           className="get-started-button1"
           onClick={handleCheckoutShopping}

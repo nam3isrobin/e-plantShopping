@@ -21,45 +21,45 @@ function ProductList({ onHomeClick }) {
     // Compute total items across all plants in cart (sum of quantities)
     const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
 
-    // Master catalog of houseplants grouped into 5 distinct categories
+    // Master catalog of houseplants grouped into 5 distinct categories with reliable high-res botanical photography
     const plantsArray = [
         {
             category: "Air Purifying Plants",
             plants: [
                 {
                     name: "Snake Plant",
-                    image: "https://cdn.pixabay.com/photo/2021/01/22/06/04/snake-plant-5939187_1280.jpg",
-                    description: "Produces oxygen at night, improving air quality.",
+                    image: "https://images.unsplash.com/photo-1593482892290-f54927ae1bb6?q=80&w=800&auto=format&fit=crop",
+                    description: "Produces oxygen at night, purifying indoor air quality.",
                     cost: "$15"
                 },
                 {
                     name: "Spider Plant",
-                    image: "https://cdn.pixabay.com/photo/2018/07/11/06/47/chlorophytum-3530413_1280.jpg",
-                    description: "Filters formaldehyde and xylene from the air.",
+                    image: "https://images.unsplash.com/photo-1572688484438-313a6e50c333?q=80&w=800&auto=format&fit=crop",
+                    description: "Resilient foliage that filters formaldehyde and household toxins.",
                     cost: "$12"
                 },
                 {
                     name: "Peace Lily",
-                    image: "https://cdn.pixabay.com/photo/2019/06/12/14/14/peace-lilies-4269365_1280.jpg",
-                    description: "Removes mold spores and purifies the air.",
+                    image: "https://images.unsplash.com/photo-1616046229478-9901c5536a45?q=80&w=800&auto=format&fit=crop",
+                    description: "Removes mold spores and blooms elegant white flowers.",
                     cost: "$18"
                 },
                 {
                     name: "Boston Fern",
-                    image: "https://cdn.pixabay.com/photo/2020/04/30/19/52/boston-fern-5114414_1280.jpg",
-                    description: "Adds humidity to the air and removes toxins.",
+                    image: "https://images.unsplash.com/photo-1597055181300-e3633a917c9c?q=80&w=800&auto=format&fit=crop",
+                    description: "Adds gentle humidity to the room and purifies ambient air.",
                     cost: "$20"
                 },
                 {
                     name: "Rubber Plant",
-                    image: "https://cdn.pixabay.com/photo/2020/02/15/11/49/flower-4850729_1280.jpg",
-                    description: "Easy to care for and effective at removing toxins.",
+                    image: "https://images.unsplash.com/photo-1600411833196-7c1f6b1a8b90?q=80&w=800&auto=format&fit=crop",
+                    description: "Broad glossy leaves that efficiently trap dust and airborne pollutants.",
                     cost: "$17"
                 },
                 {
                     name: "Aloe Vera",
-                    image: "https://cdn.pixabay.com/photo/2018/04/02/07/42/leaf-3283175_1280.jpg",
-                    description: "Purifies the air and has healing properties for skin.",
+                    image: "https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?q=80&w=800&auto=format&fit=crop",
+                    description: "Natural air cleaner and renowned therapeutic skin healer.",
                     cost: "$14"
                 }
             ]
@@ -69,38 +69,38 @@ function ProductList({ onHomeClick }) {
             plants: [
                 {
                     name: "Lavender",
-                    image: "https://images.unsplash.com/photo-1611909023032-2d6b3134ecba?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                    description: "Calming scent, widely used in aromatherapy.",
+                    image: "https://images.unsplash.com/photo-1611909023032-2d6b3134ecba?q=80&w=800&auto=format&fit=crop",
+                    description: "Calming botanical scent widely prized in holistic aromatherapy.",
                     cost: "$20"
                 },
                 {
                     name: "Jasmine",
-                    image: "https://images.unsplash.com/photo-1592729645009-b96d1e63d14b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                    description: "Sweet fragrance, promotes peaceful relaxation.",
+                    image: "https://images.unsplash.com/photo-1592729645009-b96d1e63d14b?q=80&w=800&auto=format&fit=crop",
+                    description: "Sweet delicate fragrance that promotes deep relaxation.",
                     cost: "$18"
                 },
                 {
                     name: "Rosemary",
-                    image: "https://cdn.pixabay.com/photo/2019/10/11/07/12/rosemary-4541241_1280.jpg",
-                    description: "Invigorating scent, excellent for culinary seasoning.",
+                    image: "https://images.unsplash.com/photo-1515586000433-45406d8e6662?q=80&w=800&auto=format&fit=crop",
+                    description: "Invigorating pine-like scent excellent for culinary seasoning.",
                     cost: "$15"
                 },
                 {
                     name: "Mint",
-                    image: "https://cdn.pixabay.com/photo/2016/01/07/18/16/mint-1126282_1280.jpg",
-                    description: "Refreshing aroma, used in cooling teas and beverages.",
+                    image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?q=80&w=800&auto=format&fit=crop",
+                    description: "Crisp refreshing aroma, perfect for teas and kitchen gardens.",
                     cost: "$12"
                 },
                 {
                     name: "Lemon Balm",
-                    image: "https://cdn.pixabay.com/photo/2019/09/16/07/41/balm-4480134_1280.jpg",
-                    description: "Citrusy scent, relieves stress and aids sleep.",
+                    image: "https://images.unsplash.com/photo-1598880940080-ff9a29891b85?q=80&w=800&auto=format&fit=crop",
+                    description: "Delightful citrus aroma that relieves anxiety and aids sleep.",
                     cost: "$14"
                 },
                 {
                     name: "Hyacinth",
-                    image: "https://cdn.pixabay.com/photo/2019/04/07/20/20/hyacinth-4110726_1280.jpg",
-                    description: "Stunning flowering plant known for intense sweet perfume.",
+                    image: "https://images.unsplash.com/photo-1520763185298-1b434c919102?q=80&w=800&auto=format&fit=crop",
+                    description: "Spectacular flower clusters with a rich honeyed floral perfume.",
                     cost: "$22"
                 }
             ]
@@ -110,38 +110,38 @@ function ProductList({ onHomeClick }) {
             plants: [
                 {
                     name: "Oregano",
-                    image: "https://cdn.pixabay.com/photo/2015/05/30/21/20/oregano-790702_1280.jpg",
-                    description: "Natural compounds that help deter pests and insects.",
+                    image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?q=80&w=800&auto=format&fit=crop",
+                    description: "Possesses strong natural carvacrol compounds that deter garden pests.",
                     cost: "$10"
                 },
                 {
                     name: "Marigold",
-                    image: "https://cdn.pixabay.com/photo/2022/02/22/05/45/marigold-7028063_1280.jpg",
-                    description: "Natural repellent that also brings vibrant color.",
+                    image: "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?q=80&w=800&auto=format&fit=crop",
+                    description: "Vibrant golden blossoms that naturally repel mosquitoes and nematodes.",
                     cost: "$8"
                 },
                 {
                     name: "Geraniums",
-                    image: "https://cdn.pixabay.com/photo/2012/04/26/21/51/flowerpot-43270_1280.jpg",
-                    description: "Pleasant scent while naturally driving away mosquitoes.",
+                    image: "https://images.unsplash.com/photo-1589244159943-460088ed5c92?q=80&w=800&auto=format&fit=crop",
+                    description: "Classic ornamental blooms that deter flying insects with citrus notes.",
                     cost: "$20"
                 },
                 {
                     name: "Basil",
-                    image: "https://cdn.pixabay.com/photo/2016/07/24/20/48/tulsi-1539181_1280.jpg",
-                    description: "Repels flies and mosquitoes, essential in Italian cuisine.",
+                    image: "https://images.unsplash.com/photo-1618375569909-3c8616cf7733?q=80&w=800&auto=format&fit=crop",
+                    description: "Aromatic garden essential that naturally keeps flies and pests away.",
                     cost: "$9"
                 },
                 {
                     name: "Catnip",
-                    image: "https://cdn.pixabay.com/photo/2015/07/02/21/55/cat-829681_1280.jpg",
-                    description: "Repels mosquitoes and brings joy to felines.",
+                    image: "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?q=80&w=800&auto=format&fit=crop",
+                    description: "Rich in nepetalactone which repels bugs ten times better than DEET.",
                     cost: "$13"
                 },
                 {
                     name: "Citronella Grass",
-                    image: "https://cdn.pixabay.com/photo/2018/04/02/07/42/leaf-3283175_1280.jpg",
-                    description: "Renowned botanical base for organic insect sprays.",
+                    image: "https://images.unsplash.com/photo-1512428813834-c702c7702b78?q=80&w=800&auto=format&fit=crop",
+                    description: "The gold standard natural mosquito and insect deterrent.",
                     cost: "$16"
                 }
             ]
@@ -151,38 +151,38 @@ function ProductList({ onHomeClick }) {
             plants: [
                 {
                     name: "Echinacea",
-                    image: "https://cdn.pixabay.com/photo/2014/12/05/03/53/echinacea-557477_1280.jpg",
-                    description: "Boosts immune defenses and fights common ailments.",
+                    image: "https://images.unsplash.com/photo-1563245372-f21724e3856d?q=80&w=800&auto=format&fit=crop",
+                    description: "Purple coneflower famed for boosting natural immune defenses.",
                     cost: "$16"
                 },
                 {
                     name: "Peppermint",
-                    image: "https://cdn.pixabay.com/photo/2017/07/12/12/23/peppermint-2496773_1280.jpg",
-                    description: "Relieves digestive discomfort and tension headaches.",
+                    image: "https://images.unsplash.com/photo-1628744448840-55bdb2497bd4?q=80&w=800&auto=format&fit=crop",
+                    description: "Cooling menthol leaves that soothe digestion and tension.",
                     cost: "$13"
                 },
                 {
                     name: "Chamomile",
-                    image: "https://cdn.pixabay.com/photo/2016/08/19/19/48/flowers-1606041_1280.jpg",
-                    description: "Gentle floral herb promoting restful relaxation.",
+                    image: "https://images.unsplash.com/photo-1587593810167-a84920ea0781?q=80&w=800&auto=format&fit=crop",
+                    description: "Gentle daisy-like herb known worldwide for calming nerves.",
                     cost: "$15"
                 },
                 {
                     name: "Calendula",
-                    image: "https://cdn.pixabay.com/photo/2019/07/15/18/28/flowers-4340127_1280.jpg",
-                    description: "Soothes skin irritations and accelerates healing.",
+                    image: "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?q=80&w=800&auto=format&fit=crop",
+                    description: "Golden petals packed with skin-rejuvenating flavonoids.",
                     cost: "$12"
                 },
                 {
                     name: "Ashwagandha",
-                    image: "https://cdn.pixabay.com/photo/2018/11/15/10/32/plants-3816945_1280.jpg",
-                    description: "Ancient adaptogen that reduces stress and fatigue.",
+                    image: "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?q=80&w=800&auto=format&fit=crop",
+                    description: "Revered Ayurvedic adaptogen that builds stamina and mental focus.",
                     cost: "$24"
                 },
                 {
                     name: "Thyme",
-                    image: "https://cdn.pixabay.com/photo/2019/10/11/07/12/rosemary-4541241_1280.jpg",
-                    description: "Antimicrobial herb with soothing properties.",
+                    image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?q=80&w=800&auto=format&fit=crop",
+                    description: "Antimicrobial thymol herb ideal for respiratory comfort.",
                     cost: "$11"
                 }
             ]
@@ -192,71 +192,43 @@ function ProductList({ onHomeClick }) {
             plants: [
                 {
                     name: "ZZ Plant",
-                    image: "https://images.unsplash.com/photo-1632207691143-643e2a9a9361?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                    image: "https://images.unsplash.com/photo-1632207691143-643e2a9a9361?q=80&w=800&auto=format&fit=crop",
                     description: "Thrives in low light conditions with infrequent watering.",
                     cost: "$25"
                 },
                 {
                     name: "Pothos",
-                    image: "https://cdn.pixabay.com/photo/2018/11/15/10/32/plants-3816945_1280.jpg",
-                    description: "Extremely resilient vine that trails elegantly indoors.",
+                    image: "https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?q=80&w=800&auto=format&fit=crop",
+                    description: "Extremely resilient vine that trails gracefully across any room.",
                     cost: "$10"
                 },
                 {
                     name: "Cast Iron Plant",
-                    image: "https://cdn.pixabay.com/photo/2017/02/16/18/04/cast-iron-plant-2072008_1280.jpg",
-                    description: "Hardy specimen that withstands neglect and shade.",
+                    image: "https://images.unsplash.com/photo-1600411833196-7c1f6b1a8b90?q=80&w=800&auto=format&fit=crop",
+                    description: "Nearly indestructible indoor plant that tolerates deep shade.",
                     cost: "$20"
                 },
                 {
                     name: "Succulents",
-                    image: "https://cdn.pixabay.com/photo/2016/11/21/16/05/cacti-1846147_1280.jpg",
-                    description: "Drought-tolerant flora featuring captivating geometric foliage.",
+                    image: "https://images.unsplash.com/photo-1509423350716-97f9360b4e09?q=80&w=800&auto=format&fit=crop",
+                    description: "Drought-hardy miniature sculptures that demand very little water.",
                     cost: "$18"
                 },
                 {
                     name: "Aglaonema",
-                    image: "https://cdn.pixabay.com/photo/2014/10/10/04/27/aglaonema-482915_1280.jpg",
-                    description: "Requires minimal care while providing lush leaf patterns.",
+                    image: "https://images.unsplash.com/photo-1593482892290-f54927ae1bb6?q=80&w=800&auto=format&fit=crop",
+                    description: "Lush variegated foliage that effortlessly brightens darker corners.",
                     cost: "$22"
                 },
                 {
                     name: "Jade Plant",
-                    image: "https://cdn.pixabay.com/photo/2020/02/15/11/49/flower-4850729_1280.jpg",
-                    description: "Symbol of good luck and very easy to nurture.",
+                    image: "https://images.unsplash.com/photo-1509423350716-97f9360b4e09?q=80&w=800&auto=format&fit=crop",
+                    description: "Beloved good-luck succulent with plump, jewel-toned leaves.",
                     cost: "$19"
                 }
             ]
         }
     ];
-
-    // Navbar styling definitions
-    const styleObj = {
-        backgroundColor: '#4CAF50',
-        color: '#fff!important',
-        padding: '15px',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        fontSize: '20px',
-    };
-
-    const styleObjUl = {
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        width: '1100px',
-    };
-
-    const styleA = {
-        color: 'white',
-        fontSize: '30px',
-        textDecoration: 'none',
-        position: 'relative',
-        display: 'inline-flex',
-        alignItems: 'center',
-        cursor: 'pointer',
-    };
 
     /**
      * Navigates back to the Landing Page.
@@ -307,72 +279,64 @@ function ProductList({ onHomeClick }) {
     return (
         <div>
             {/* Header: Displays on BOTH the Product Listing Page and Shopping Cart Page */}
-            <div className="navbar" style={styleObj}>
+            <header className="navbar">
                 <div className="tag">
                     <div className="luxury">
                         <img
-                            src="https://cdn.pixabay.com/photo/2020/08/05/13/12/eco-5465432_1280.png"
+                            src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=80&w=160&auto=format&fit=crop"
                             alt="Paradise Nursery Logo"
                         />
                         <a href="/" onClick={(e) => handleHomeClick(e)}>
-                            <div>
-                                <h3 style={{ color: 'white' }}>Paradise Nursery</h3>
-                                <i style={{ color: 'white' }}>Where Green Meets Serenity</i>
-                            </div>
+                            <h3>Paradise Nursery</h3>
+                            <i>Where Green Meets Serenity</i>
                         </a>
                     </div>
                 </div>
 
-                <div style={styleObjUl}>
-                    <div>
-                        <a href="#plants" onClick={(e) => handlePlantsClick(e)} style={styleA}>
-                            Plants
-                        </a>
-                    </div>
-                    <div>
-                        <a
-                            href="#cart"
-                            onClick={(e) => handleCartClick(e)}
-                            style={styleA}
-                            aria-label={`Shopping cart with ${totalItems} items`}
-                        >
-                            {/* Value displaying total number of items in the cart */}
-                            <div className="cart_quantity_count">{totalItems}</div>
-                            <h1 className="cart">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 256 256"
-                                    id="IconChangeColor"
-                                    height="68"
-                                    width="68"
-                                >
-                                    <rect width="156" height="156" fill="none"></rect>
-                                    <circle cx="80" cy="216" r="12"></circle>
-                                    <circle cx="184" cy="216" r="12"></circle>
-                                    <path
-                                        d="M42.3,72H221.7l-26.4,92.4A15.9,15.9,0,0,1,179.9,176H84.1a15.9,15.9,0,0,1-15.4-11.6L32.5,37.8A8,8,0,0,0,24.8,32H8"
-                                        fill="none"
-                                        stroke="#faf9f9"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth="2"
-                                        id="mainIconPathAttribute"
-                                    ></path>
-                                </svg>
-                            </h1>
-                        </a>
-                    </div>
-                </div>
-            </div>
+                <nav className="nav-menu">
+                    <a href="#plants" onClick={(e) => handlePlantsClick(e)} className="nav-link">
+                        Plants
+                    </a>
+                    <a
+                        href="#cart"
+                        onClick={(e) => handleCartClick(e)}
+                        className="nav-cart-link"
+                        aria-label={`Shopping cart with ${totalItems} items`}
+                    >
+                        {/* Dynamic Cart Count Badge */}
+                        <div className="cart_quantity_count">{totalItems}</div>
+                        <div className="cart">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 256 256"
+                                id="IconChangeColor"
+                            >
+                                <rect width="256" height="256" fill="none"></rect>
+                                <circle cx="80" cy="216" r="16" fill="#ffffff"></circle>
+                                <circle cx="184" cy="216" r="16" fill="#ffffff"></circle>
+                                <path
+                                    d="M42.3,72H221.7l-26.4,92.4A15.9,15.9,0,0,1,179.9,176H84.1a15.9,15.9,0,0,1-15.4-11.6L32.5,37.8A8,8,0,0,0,24.8,32H8"
+                                    fill="none"
+                                    stroke="#ffffff"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="16"
+                                    id="mainIconPathAttribute"
+                                ></path>
+                            </svg>
+                        </div>
+                    </a>
+                </nav>
+            </header>
 
             {/* Main Content Area: Conditional Rendering between Product Listing and Shopping Cart */}
             {!showCart ? (
-                <div className="product-grid">
+                <main className="product-grid">
                     {plantsArray.map((category, index) => (
-                        <div key={index} style={{ width: '100%' }}>
+                        <section key={index} style={{ width: '100%' }}>
                             {/* Plant Category Heading */}
                             <div className="plantname_heading">
-                                <h1 className="plant_heading">{category.category}</h1>
+                                <h2 className="plant_heading">{category.category}</h2>
                             </div>
 
                             {/* Grid of Plant Cards in this Category */}
@@ -380,41 +344,36 @@ function ProductList({ onHomeClick }) {
                                 {category.plants.map((plant, plantIndex) => {
                                     const itemAdded = isInCart(plant.name);
                                     return (
-                                        <div className="product-card" key={plantIndex}>
+                                        <article className="product-card" key={plantIndex}>
                                             <img
                                                 className="product-image"
                                                 src={plant.image}
                                                 alt={plant.name}
+                                                loading="lazy"
                                             />
-                                            <div className="product-title">{plant.name}</div>
-                                            <div
-                                                className="product-description"
-                                                style={{
-                                                    fontStyle: 'italic',
-                                                    margin: '8px 0',
-                                                    fontSize: '14px',
-                                                    color: '#555'
-                                                }}
-                                            >
-                                                {plant.description}
-                                            </div>
-                                            <div className="product-price">{plant.cost}</div>
+                                            <div className="product-info">
+                                                <h3 className="product-title">{plant.name}</h3>
+                                                <p className="product-description">
+                                                    {plant.description}
+                                                </p>
+                                                <div className="product-price">{plant.cost}</div>
 
-                                            {/* Button: disabled and styled when item is added */}
-                                            <button
-                                                className={`product-button ${itemAdded ? 'added-to-cart' : ''}`}
-                                                onClick={() => handleAddToCart(plant)}
-                                                disabled={itemAdded}
-                                            >
-                                                {itemAdded ? 'Added to Cart' : 'Add to Cart'}
-                                            </button>
-                                        </div>
+                                                {/* Button: disabled and styled when item is added */}
+                                                <button
+                                                    className={`product-button ${itemAdded ? 'added-to-cart' : ''}`}
+                                                    onClick={() => handleAddToCart(plant)}
+                                                    disabled={itemAdded}
+                                                >
+                                                    {itemAdded ? 'Added to Cart' : 'Add to Cart'}
+                                                </button>
+                                            </div>
+                                        </article>
                                     );
                                 })}
                             </div>
-                        </div>
+                        </section>
                     ))}
-                </div>
+                </main>
             ) : (
                 <CartItem onContinueShopping={handleContinueShopping} />
             )}

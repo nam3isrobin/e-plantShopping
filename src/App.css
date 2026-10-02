@@ -1,147 +1,204 @@
-/* LandingPage.css */
+/* App.css - Paradise Nursery Core Layout & Landing Page Styling */
+
+/* Base Reset & Typography */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
+html, body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #0f172a;
+  color: #1e293b;
+  overflow-x: hidden;
+}
+
+/* Master App Container */
+.app-container {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Landing Page Section */
 .landing-page {
   position: relative;
   width: 100vw;
-  height: 100vh;
-  background-color: #f8f8f8;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: opacity 0.5s ease-in-out;
 }
 
+.landing-page.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Atmospheric Greenhouse Botanical Background */
 .background-image {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('https://cdn.pixabay.com/photo/2017/07/13/08/59/greenhouse-2499758_1280.jpg');
-  background-size: 100% 100%;
+  background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.75) 0%, rgba(6, 78, 59, 0.7) 100%),
+                    url('https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=80&w=2000&auto=format&fit=crop');
+  background-size: cover;
   background-position: center;
-  filter: brightness(0.8);
+  background-repeat: no-repeat;
+  filter: brightness(0.85);
+  transform: scale(1.02);
+  transition: transform 10s ease;
 }
+
+/* Landing Content Container */
 .content {
+  position: relative;
+  z-index: 10;
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
-  width: 100vw;
- top: 100px;
-  backdrop-filter: blur(4px);
-  background-color: rgba(0,0,0,0.5);
-  gap: 20px;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1280px;
+  min-height: 100vh;
+  padding: 60px 32px;
+  gap: 48px;
 }
 
+/* Left Hero Branding Column */
 .landing_content {
- margin-top: 430px;
-  margin-left: 100px;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  text-align: center;
-  /* background-color: red; */
-  width: 400px;
-  height: 400px;
+  flex: 1;
+  max-width: 480px;
   display: flex;
-  align-items: center;
   flex-direction: column;
-  justify-content: center;
-  gap: 10px;
+  align-items: flex-start;
+  text-align: left;
 }
 
-.content p,
-.content h1 {
-  color: white;
+.landing_content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #ffffff;
+  margin-bottom: 12px;
+  text-wrap: balance;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  letter-spacing: -0.02em;
 }
 
-.content h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
-}
-
-.content p {
-  font-size: 25px;
+.landing_content p {
+  font-size: 1.35rem;
+  color: #6ee7b7;
+  font-style: italic;
+  font-weight: 500;
+  margin-bottom: 28px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-wrap: balance;
 }
 
 .divider {
-  width: 50px;
-  height: 2px;
-  background-color: #4caf50;
-  margin: 10px 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #10b981 0%, #34d399 100%);
+  border-radius: 4px;
+  margin-bottom: 16px;
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.6);
 }
 
+/* Get Started Luxury CTA Button */
 .get-started-button {
-  padding: 15px 25px;
-  font-size: 23px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 40px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
   border: none;
-  border-radius: 5px;
-  background-color: #4caf50;
-  color: white;
+  border-radius: 12px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 40px;
+  box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.5), 0 8px 10px -6px rgba(16, 185, 129, 0.3);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
 }
 
 .get-started-button:hover {
-  background-color: #45a049;
+  background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px -5px rgba(16, 185, 129, 0.6);
 }
 
-/* ProductList.css */
+.get-started-button:active {
+  transform: scale(0.98);
+}
 
+/* Right Glassmorphism About Us Column */
+.aboutus_container {
+  flex: 1.2;
+  max-width: 660px;
+  display: flex;
+  align-items: center;
+}
+
+/* Product List Sliding Container */
 .product-list-container {
-  position: absolute;
-  overflow-x: hidden;
+  position: fixed;
   top: 100vh;
-  /* Initially off-screen */
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(255, 255, 255, 0.9);
-  /* Adjust background opacity as needed */
-  transition: top 0.5s ease;
-  /* Smooth transition for top property */
+  background-color: #f8fafc;
+  transition: top 0.45s cubic-bezier(0.16, 1, 0.3, 1);
   overflow-y: auto;
-  /* Enable vertical scrolling */
-  z-index: 2;
-  /* Ensure it's above landing page content */
-  backdrop-filter: blur(5px);
+  z-index: 50;
+  -webkit-overflow-scrolling: touch;
 }
 
 .product-list-container.visible {
   top: 0;
 }
-/* LandingPage.css */
-@media screen and (max-width: 768px) {
+
+/* Responsive Media Queries */
+@media screen and (max-width: 1024px) {
   .content {
     flex-direction: column;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
+    justify-content: center;
+    padding: 60px 24px;
+    gap: 36px;
+    text-align: center;
   }
 
   .landing_content {
-    margin-top: 100px; /* Adjust as needed */
-    margin-left: 0;
-    width: 80%; /* Adjust as needed */
+    max-width: 100%;
+    align-items: center;
     text-align: center;
   }
 
   .aboutus_container {
-    margin-top: 20px; /* Adjust as needed */
-    width: 80%; /* Adjust as needed */
+    max-width: 100%;
   }
 }
 
-@media screen and (max-width: 480px) {
-  .landing_content {
-    margin-top: 50px; /* Adjust as needed */
-    width: 90%; /* Adjust as needed */
+@media screen and (max-width: 640px) {
+  .landing_content h1 {
+    font-size: 2.5rem;
   }
 
-  .aboutus_container {
-    width: 90%; /* Adjust as needed */
+  .landing_content p {
+    font-size: 1.15rem;
+  }
+
+  .get-started-button {
+    width: 100%;
+    padding: 14px 28px;
+    font-size: 1.05rem;
   }
 }
